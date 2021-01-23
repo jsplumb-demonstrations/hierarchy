@@ -1,8 +1,8 @@
-jsPlumb.ready(function () {
+jsPlumbBrowserUI.ready(function () {
 
     var color = "gray";
 
-    var instance = jsPlumb.newInstance({
+    var instance = jsPlumbBrowserUI.newInstance({
         // notice the 'curviness' argument to this Bezier curve.  the curves on this page are far smoother
         // than the curves on the first demo, which use the default curviness value.
         connector: [ "Bezier", { curviness: 50 } ],
@@ -48,6 +48,4 @@ jsPlumb.ready(function () {
         instance.connect({uuids: ["chartWindow2-bottom", "chartWindow5-top" ], overlays: overlays});
 
     });
-
-   // jsPlumb.fire("jsPlumbDemoLoaded", instance);
 });
