@@ -3,6 +3,11 @@
     touch-action:none;
 }
 
+#canvas {
+    width:100vw;
+    height:100vh;
+}
+
 /** ELEMENTS **/
 .chart-demo .window { 
 	border:0.1em dotted #d4e06b; 	
