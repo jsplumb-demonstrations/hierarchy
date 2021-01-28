@@ -11,7 +11,7 @@ jsPlumbBrowserUI.ready(function () {
         endpointStyle: { radius: 9, fill: color },
         hoverPaintStyle: {stroke: "#ec9f2e" },
         endpointHoverStyle: {fill: "#ec9f2e" },
-        container: "canvas"
+        container: canvas
     });
 
     // suspend drawing and initialise.
