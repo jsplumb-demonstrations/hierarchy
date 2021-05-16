@@ -1,5 +1,5 @@
 import { newInstance, ready } from "@jsplumb/browser-ui"
-import { ArrowOverlay, BezierConnector } from "@jsplumb/core"
+import { ArrowOverlay, BezierConnector, BezierOptions, AnchorLocations } from "@jsplumb/core"
 
 ready(() =>{
 
@@ -9,7 +9,7 @@ ready(() =>{
     const instance = newInstance({
         // notice the 'curviness' argument to this Bezier curve.  the curves on this page are far smoother
         // than the curves on the first demo, which use the default curviness value.
-        connector: { type:BezierConnector.type, options:{ curviness: 50 } },
+        connector: { type:BezierConnector.type, options:{ curviness: 50 } as BezierOptions },
         dragOptions: { cursor: "pointer", zIndex: 2000 },
         paintStyle: { stroke: color, strokeWidth: 2 },
         endpointStyle: { radius: 9, fill: color },
@@ -32,12 +32,12 @@ ready(() =>{
         for (let i = 0; i < windows.length; i++) {
             instance.addEndpoint(windows[i], {
                 uuid: windows[i].getAttribute("id") + "-bottom",
-                anchor: "Bottom",
+                anchor: AnchorLocations.Bottom,
                 maxConnections: -1
             });
             instance.addEndpoint(windows[i], {
                 uuid: windows[i].getAttribute("id") + "-top",
-                anchor: "Top",
+                anchor: AnchorLocations.Top,
                 maxConnections: -1
             });
         }
